@@ -13,7 +13,7 @@ import Typography from "@material-ui/core/Typography";
 import MapAutocomplete from "../../components/MapAutocomplete";
 import { setAddress } from "../../reference/redux/actions/addListingAction";
 import { connect } from "react-redux";
-import * as geometry from 'spherical-geometry-js';
+import * as geometry from "spherical-geometry-js";
 
 // import { bugs, website, server } from "variables/general.jsx";
 
@@ -27,11 +27,10 @@ import dashboardStyle from "assets/jss/material-dashboard-react/views/dashboardS
 import { compose } from "redux";
 import { Link } from "react-router-dom";
 
-
 class Dashboard extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {address: ""};
+    this.state = { address: "" };
   }
 
   inputChange = e => {
@@ -62,7 +61,19 @@ class Dashboard extends React.Component {
             id="address"
             onChange={this.inputChange}
           />
-          <Button color="white" aria-label="edit" justIcon round component={Link} to={{pathname: `/admin/listings/${this.props.position.lat}/${this.props.position.lng}`, state: this.props.position}}>
+          <Button
+            color="white"
+            aria-label="edit"
+            justIcon
+            round
+            component={Link}
+            to={{
+              pathname: `/admin/listings/${this.props.position.lat}/${
+                this.props.position.lng
+              }`,
+              state: this.props.position
+            }}
+          >
             <Search />
           </Button>
           <Button color="white" aria-label="edit" justIcon round>
