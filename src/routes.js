@@ -32,14 +32,6 @@ const dashboardRoutes = [
     display: true
   },
   {
-    path: "/listings/:lat/:lng",
-    name: "Listings within 10 miles",
-    icon: Dashboard,
-    component: PropertiesPage,
-    layout: "/admin",
-    display: false
-  },
-  {
     path: "/user/profile",
     name: "User Profile",
     icon: Person,
@@ -84,6 +76,14 @@ const dashboardRoutes = [
     name: "Listing",
     icon: Notifications,
     component: EditListing,
+    layout: "/admin",
+    display: false
+  },
+  {
+    path: "/listings/:lat/:lng",
+    name: "Listings within 10 miles",
+    icon: Dashboard,
+    component: PropertiesPage,
     layout: "/admin",
     display: false
   }
