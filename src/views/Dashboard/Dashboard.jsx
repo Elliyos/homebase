@@ -24,7 +24,7 @@ import * as geometry from 'spherical-geometry-js';
 // } from "variables/charts.jsx";
 
 import dashboardStyle from "assets/jss/material-dashboard-react/views/dashboardStyle.jsx";
-import { compose } from "../../../../../AppData/Local/Microsoft/TypeScript/3.4.3/node_modules/redux";
+import { compose } from "redux";
 import { Link } from "react-router-dom";
 
 
